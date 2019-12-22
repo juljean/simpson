@@ -9,10 +9,10 @@
 
 import sys
 import PyQt5
-from PyQt5 import QtWidgets
+from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
-from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui  import *
 from integr_rewrited import *
 import numpy as np
 

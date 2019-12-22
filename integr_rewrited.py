@@ -9,12 +9,13 @@
 
 import sys
 import PyQt5
-from PyQt5 import QtWidgets
+from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
-from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui  import *
 from closing_win import *
 import numpy as np
+
 
 class Integr_win(object):
 
@@ -29,9 +30,8 @@ class Integr_win(object):
         b=self.input_b()
         N=self.input_N()
         y=self.input_y()
-        print(a,b,y,N)
         dx = (b-a) / N  # step
-        x = np.linspace(5, self.input_b(), N + 1)
+        x = np.linspace(a, b, N + 1)
         f = eval(y)
         S = dx / 3 * np.sum(f[0:-1:2] + 4 * f[1::2] + f[2::2])  # sums all list's elements with changes
         print("Answer is ", S)
@@ -182,4 +182,6 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
+
 
