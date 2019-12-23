@@ -16,8 +16,7 @@ from PyQt5.QtGui  import *
 from integr_rewrited import *
 from test_gui import *
 
-# last=integr_rewrited.I
-# print(last.simps)
+
 
 class Closing(object):
     def btn_exit(self):
@@ -45,13 +44,6 @@ class Closing(object):
         font.setPointSize(18)
         self.enter_data.setFont(font)
         self.enter_data.setObjectName("enter_data")
-
-        # self.label = QtWidgets.QLabel("Відповідь:tut",Closing)
-        # self.label.setGeometry(QtCore.QRect(30, 20, 611, 101))
-        # self.font = QtGui.QFont()
-        # self.font.setPointSize(18)
-        # self.label.setFont(self.font)
-        # self.label.setText("Відповідь:tut")
 
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(310, 210, 381, 101))
@@ -81,7 +73,6 @@ class Closing(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        # self.display_value()
 
     def retranslateUi(self, MainWindow):
 
@@ -90,18 +81,14 @@ class Closing(object):
         self.enter_data.setText(_translate("MainWindow", "Відповідь: "))
         self.pushButton.setText(_translate("MainWindow", "Розпочати заново"))
         self.pushButton_2.setText(_translate("MainWindow", "Завершити програму"))
-    # def display_value(self):
-    #     #Integr_win.simps(self)
-    #     self.enter_data.setText(enter_data+"Hi")
-
 
 if __name__ == "__main__":
-    import sys
-
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Closing()
     ui.setupUi(MainWindow)
     MainWindow.show()
+    ans=Integr_win()
+    print(ans.simps())
     sys.exit(app.exec_())
 

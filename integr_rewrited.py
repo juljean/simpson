@@ -37,12 +37,6 @@ class Integr_win(object):
         print("Answer is ", S)
         return S
 
-    # def pushing(self):#функция переключения на 3 окно
-    #     self.window=QtWidgets.QMainWindow()
-    #     self.second_win=Closing()
-    #     self.second_win.setupUi(self.window)#setupUi creates a form from designer
-    #     self.window.show()
-
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1074, 755)
